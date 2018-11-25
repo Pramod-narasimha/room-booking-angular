@@ -1,0 +1,69 @@
+<div class="booking-app">
+    <div class="container-background">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="container-aux">
+                    <h3 class="title"><i class="fas fa-users"></i> Choose number of <strong>people</strong></h3>
+                    <div class="outer-container">
+                        <table>
+                            <tr>
+                                <td class="left-side"><i class="fas fa-bed fa-lg"></i><span class="left">ROOMS</span></td>
+                                <td class="right-side">
+                                    <span *ngIf="rooms<=minRooms">
+                                        <button class="ui-button" id="decreaseRoomCount" (click)="decreaseRoomCount()" disabled><i class="fa fa-minus-circle fa-lg"></i></button>
+                                    </span>
+                                    <span *ngIf="rooms>minRooms">
+                                        <button class="ui-button" id="decreaseRoomCount" (click)="decreaseRoomCount()"><i class="fa fa-minus-circle fa-lg"></i></button>
+                                    </span>
+                                    <span class="values" id="roomValue">{{rooms}}</span>
+                                    <span *ngIf="rooms>=maxRoomsAvailable">
+                                        <button class="ui-button" id="increaseRoomCount" (click)="increaseRoomCount()" disabled><i class="fa fa-plus-circle fa-lg"></i></button>
+                                    </span>
+                                    <span *ngIf="rooms<maxRoomsAvailable">
+                                        <button class="ui-button" id="increaseRoomCount" (click)="increaseRoomCount()"><i class="fa fa-plus-circle fa-lg"></i></button>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left-side"><i class="fas fa-user fa-lg"></i><span class="left">ADULTS</span></td>
+                                <td class="right-side">
+                                    <span *ngIf="adults<=minAdult">
+                                        <button class="ui-button" id="decreaseAdultsCount" (click)="decreaseAdultsCount()" disabled><i class="fa fa-minus-circle fa-lg"></i></button>
+                                    </span>
+                                    <span *ngIf="adults>minAdult">
+                                        <button class="ui-button" id="decreaseAdultsCount" (click)="decreaseAdultsCount()"><i class="fa fa-minus-circle fa-lg"></i></button>
+                                    </span>
+                                    <span class="values" id="adultValue">{{adults}}</span>
+                                    <span *ngIf="blockAddingPeople">
+                                        <button class="ui-button" id="increaseAdultsCount" (click)="increaseAdultsCount()" disabled><i class="fa fa-plus-circle fa-lg"></i></button>
+                                    </span>
+                                    <span *ngIf="!blockAddingPeople">
+                                        <button class="ui-button" id="increaseAdultsCount" (click)="increaseAdultsCount()"><i class="fa fa-plus-circle fa-lg"></i></button>
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="left-side"><i class="fas fa-child fa-lg"></i><span class="left">CHILDREN</span></td>
+                                <td class="right-side">
+                                    <span *ngIf="children<=minChildren">
+                                        <button class="ui-button" id="decreaseChildrenCount" (click)="decreaseChildrenCount()" disabled><i class="fa fa-minus-circle fa-lg"></i></button>
+                                    </span>
+                                    <span *ngIf="children>minChildren">
+                                        <button class="ui-button" id="decreaseChildrenCount" (click)="decreaseChildrenCount()"><i class="fa fa-minus-circle fa-lg"></i></button>
+                                    </span>
+                                    <span class="values" id="childrenValue">{{children}}</span>
+                                    <span *ngIf="blockAddingPeople">
+                                        <button class="ui-button" id="increaseChildrenCount" (click)="increaseChildrenCount()" disabled><i class="fa fa-plus-circle fa-lg"></i></button>
+                                    </span>
+                                    <span *ngIf="!blockAddingPeople">
+                                        <button class="ui-button" id="increaseChildrenCount"  (click)="increaseChildrenCount()"><i class="fa fa-plus-circle fa-lg"></i></button>
+                                    </span>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

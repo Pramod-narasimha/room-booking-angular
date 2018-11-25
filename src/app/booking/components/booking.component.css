@@ -1,0 +1,102 @@
+* {
+    font-family: sans-serif;
+}
+
+.left-side {
+    width: 25%;
+}
+
+.outer-container {
+    border: 1px solid #293588;
+    padding: 10px
+}
+
+.values {
+    color: grey;
+    padding: 5px;
+    font-size: 22px
+}
+
+table tr {
+    border-bottom: 1px solid;
+}
+
+tr:last-child {
+    border-bottom: none;
+}
+
+.ui-button {
+    position: relative;
+    top: 0px;
+    transition: all ease 0.3s;
+    border-radius: 50%;
+    border-width: 0px;
+    border-style: unset;
+    border-color: white;
+    background-color: white;
+    outline: none;
+}
+
+.ui-button:active {
+    top: 3px;
+}
+
+.ui-button:disabled {
+    top: 0px;
+    color: grey;
+}
+
+.fa-plus-circle .ui-button:disabled {
+    top: 0px;
+    color: grey;
+}
+
+.ui-button:hover {
+    border-radius: 50%;
+}
+
+.ui-button:disabled .fa-plus-circle {
+    color: grey;
+}
+
+.ui-button .fa-plus-circle {
+    color: #ee3c62;
+}
+
+table {
+    width: 100%;
+    color: #293588;
+}
+
+.left {
+    text-align: left;
+    padding: 15px;
+    font-size: 16px;
+
+}
+
+.right-side {
+    text-align: right;
+    padding: 15px;
+
+}
+
+.title {
+    text-align: left;
+    color: #293588;
+}
+
+.booking-app {
+    width: 100%;
+}
+
+.container-aux {
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.container-fluid {
+    margin: auto;
+}
+
